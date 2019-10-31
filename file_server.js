@@ -65,7 +65,7 @@ app.get('/', function (request, response) {
     console.log(log);
 		Admin.log(log, currentIP, function(){});
 
-		response.render('index')
+		response.send('website under construction')
 
 
 });
