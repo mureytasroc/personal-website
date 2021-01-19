@@ -1,0 +1,125 @@
+<div id="ajax-page" class="ajax-page-content">
+    <div class="ajax-page-wrapper">
+        <div class="ajax-page-nav">
+            <div class="nav-item ajax-page-prev-next">
+              <a class="ajax-page-load" id ="portfolio-previous-button"><i class="zmdi zmdi-chevron-left"></i></a>
+              <a class="ajax-page-load" id="portfolio-next-button"><i class="zmdi zmdi-chevron-right"></i></a>
+            </div>
+            <div class="nav-item ajax-page-close-button">
+                <a id="ajax-page-close-button" href="#"><i class="zmdi zmdi-close"></i></a>
+            </div>
+        </div>
+
+        <div class="ajax-page-title">
+            <h1>Penn Courses API Auto-Docs</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-7 col-md-7 portfolio-block">
+                <div class="owl-carousel portfolio-page-carousel">
+                    <div class="item">
+                        <img src="images/portfolio/full/pcx_docs_intro.png" alt="" />
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/pcx_auto_docs.png" alt="" />
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/pcx_docs_pca.png" alt="" />
+                    </div>
+                </div>
+
+                <!--
+                <div class="portfolio-page-image">
+                    <img src="images/portfolio/1.jpg" alt="">
+                </div>
+                -->
+
+                <script type="text/javascript">
+                    jQuery(document).ready(function($){
+
+                        $('.portfolio-page-carousel').owlCarousel({
+                            smartSpeed:1200,
+                            items: 1,
+                            loop: true,
+                            dots: true,
+                            nav: true,
+                            navText: false,
+                            margin: 10
+                        });
+
+                    });
+                </script>
+            </div>
+
+            <div class="col-sm-5 col-md-5 portfolio-block">
+                <!-- Project Description -->
+                <div class="block-title">
+                    <h3>Quick Info / Links</h3>
+                </div>
+                <ul class="project-general-info">
+                  <li><p><i style="color:black; font-size: 18px;" class="fa fa-calendar"></i> Spring 2020 - Fall 2020</p></li>
+                  <li><p><i style="color:black; font-size: 18px;" class="fa fa-file-text-o"></i> <a target="_blank" rel="noopener noreferrer" href="https://penncourseplan.com/api/documentation/">Penn Courses API Documentation</a></p></li>
+                  <li><p><i style="color:black; font-size: 18px;" class="fa fa-github"></i> <a target="_blank" rel="noopener noreferrer" href="https://github.com/pennlabs/penn-courses">Github Codebase</a></p></li>
+                </ul>
+
+                <p>
+                  After working on the backend of <a class="ajax-page-load" href="/penn_course_alert">Penn Course Alert</a> and <a class="ajax-page-load" href="/penn_course_plan">Penn Course Plan</a>, I had a strong understanding of the
+                  Penn Courses API and our unified backend codebase. Therefore, I was in a good position to improve our codebase's documentation. Clear, detailed, and up-to-date documentation is especially important in a student organization
+                  with new members joining every semester. So I designed a system which would automatic infer an API specification from our codebase,
+                  and generate a documentation page with these qualities. The docs are populated with comments and Django help_text strings extracted from our codebase (additionally supporting various optional customizations).
+                </p>
+                <!-- /Project Description -->
+
+                <!-- Technology -->
+                <div class="tags-block">
+                    <div class="block-title">
+                        <h3>Technologies Personally Used</h3>
+                    </div>
+                    <ul class="tags">
+                        <li><a>Python</a></li>
+                        <li><a>Django</a></li>
+                        <li><a>Django REST Framework</a></li>
+                        <li><a>OpenAPI</a></li>
+                        <li><a>Redoc</a></li>
+                    </ul>
+                </div>
+                <!-- /Technology -->
+
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 portfolio-block">
+            <div class="block-title">
+                <h3>Project Description</h3>
+            </div>
+            <p>
+              Clear, detailed, and up-to-date documentation is very important for any complex codebase.
+              But it is especially important in a complex codebase managed by a student organization, implying
+              a high member turnover rate (approximately 25% of Labs members graduate each year, and the club's most knowledgeable members
+              are concentrated disproportionately in the graduating group). At the same time, our members develop our codebase as
+              a part-time project (with their primary "employment" being their college studies). Lots of open-source projects
+              with part-time developers suffer from a lack of focus or effort allocated to the less exciting tasks.
+              Our documentation's combined high value and high risk of neglect was the main problem targeted
+              by my auto-docs system. The system would generate an accurate spec and high-quality default documentation without any need for manual input,
+              by inspecting the codebase. Additionally, improving the comprehensibility of the generated docs with
+              comments and customizations would be easy and enforcable via code reviews.
+              <br><br>My starting point for this system was Django's <a target="_blank" rel="noopener noreferrer" href="https://www.django-rest-framework.org/api-guide/schemas/" >AutoSchema</a> class
+              and the <a target="_blank" rel="noopener noreferrer" href="https://github.com/Redocly/redoc">Redoc</a> project. However,
+              simply installing Redoc and using DRF's default AutoSchema class resulted in docs which were quite barebones.
+              These docs could really only serve as a reference for developers already familiar with the codebase,
+              as many intricacies and details of the API were not represented or explained anywhere in the docs.
+              <br><br>So, I set out to improve DRF's AutoSchema class both in its default behavior and customizability. I also
+              modified the code underlying Redoc with the same goals. I created an AutoSchema subclass called PcxAutoSchema,
+              which is the workhorse behind our auto-docs system. I also wrote some code to modify/improve the resulting OpenAPI schema
+              (built up by DRF using the codebase's various PcxAutoSchema instances) in ways beyond the reach of the AutoSchema class. I implemented all these changes
+              in a <a target="_blank" rel="noopener noreferrer" href="https://github.com/pennlabs/penn-courses/blob/master/backend/PennCourses/docs_settings.py" >docs_settings.py</a> file, also including a section at the top of the file for some manual customizations
+              (which weren't appropriate to afford elsewhere in the codebase). I even included comprehensive meta-docs in this file, so future members can
+              understand how to maintain the docs as they modify the codebase and develop new features.
+              <br><br>Many of my improvements to DRF's AutoSchema class are generalizable beyond the Penn Courses codebase. I intend open a pull request
+              in the Django REST Framework repo so that DRF's many users can benefit from these improvements, just as Labs has.
+              <br><br>
+            </p>
+          </div>
+        </div>
+    </div>
+</div>

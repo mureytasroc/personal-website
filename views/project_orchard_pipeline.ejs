@@ -1,0 +1,38 @@
+<div id="ajax-page" class="ajax-page-content">
+    <div class="ajax-page-wrapper">
+        <div class="ajax-page-nav">
+            <div class="nav-item ajax-page-prev-next">
+                <a class="ajax-page-load" id ="portfolio-previous-button"><i class="zmdi zmdi-chevron-left"></i></a>
+                <a class="ajax-page-load" id="portfolio-next-button"><i class="zmdi zmdi-chevron-right"></i></a>
+            </div>
+            <div class="nav-item ajax-page-close-button">
+                <a id="ajax-page-close-button" href="#"><i class="zmdi zmdi-close"></i></a>
+            </div>
+        </div>
+
+        <div class="ajax-page-title">
+            <h1>Orchard CNN Pipeline</h1>
+        </div>
+
+        <div class="page-content">
+          <p>
+            Orchard is an NYC-based real estate and technology startup, aiming to transform the real estate industry through modernization, vertical integration, and streamlining of the customer experience.  Their current markets are in Austin TX, San Antonio TX, Atlanta GA, and Denver CO.  The company has developed a number of interesting features and products to improve the home buying and selling experience.  The features most relevant to my job over the summer include their automated valuation model and their image-related home search features.  The company’s automated valuation model (AVM) is an ML-based algorithm for estimating the value of a home.  Orchard’s AVM has industry-leading accuracy, in large part due to the kind of data they feed into their model.  While most competitors use only text and numerical data from the MLS (a database used by realtors to store information about real estate transactions) and not much else, Orchard extracts price-relevant information from the images in the MLS as and feeds that into their model as well.  They have developed an array of convolutional neural networks (CNNs) to classify over 100 price-relevant features of homes based on the listing photos.  They also use these image classifiers in a number of image-based home search features to improve the customer’s search experience.  Some of these features include photo-based search, improved filtering (made possible by automatically extracting more complete and detailed information about each house from its images), and setting all the preview pictures in search results to be of a specific room or part of the house.
+          </p>
+          <p>
+            My primary goal coming into the internship was clear.  I was to develop production-quality CNNs for as many price-relevant features as possible.  However, after developing a few models (which involved defining classes, labeling training and test data, designing model architecture, tuning hyperparameters, and iterating), I realized there was significant room for improvement in the company’s model development process.  The process felt like developing from the ground up for each new model.  There was a lack of standardization, lots of room for human error, a lack of organization, a lack of model/data provenance, and lack of model reproducibility.  Due to these factors, once a model was finished and put into production, it was often difficult for Orchard data scientists to unpack it at a later time to analyze how it was developed or tweak/update it.  The complexity and disorganization of the process also made it fairly difficult for new hires (such as myself and my fellow interns) to get up-to-speed.
+          </p>
+          <p>
+            I came up with a plan to address these issues and make various other improvements, which I presented to my boss.  Impressed with my plan, he retasked me for the remainder of the summer on implementing it.  I worked very hard to deliver, and ultimately achieved what I had set out to do for the company.  My boss told me at the end of the summer, “Your vision for the reproducibility pipeline was extraordinarily big, and, as importantly, you delivered on it.”
+          </p>
+          <p>
+            Essentially what I built was a model development pipeline reminiscent of a factory assembly line.  It covered the entire process of gathering data, labeling, tuning hyperparameters, training, and iteration.  It was highly automated to optimize the productivity of the user, and otherwise optimized for training speed and cost.  It fully automated pulling of data from the company’s databases, preventing data contamination and saving lots of time.  Using my web development skills, I developed a website for labeling data which made it much easier to label images quickly and added other useful features like counters to track the number of images labeled per class.  Rather than stored locally (probably to be eventually deleted without record, as used to be the case), data used in training and evaluating each model was automatically synced to Amazon S3 databases.  Designing the model architecture and tuning hyperparameters (which used to be done by editing code directly) was abstracted out into an easily reviewable and human-friendly iteration config file.  Config files for each iteration were also automatically synced to S3.  The system afforded version control to the user, so if they tried out a new iteration with different settings and got worse results, they could revert their data and/or settings to a previous iteration.  There are honestly too many features that I added to the config file to list here (some of them include: optional transfer learning from other models, image cropping, listing-level evaluation, saving of commit hash to ensure the exact code a model was trained on was saved, custom-weighting features, pausing and continuing training, etc etc etc).  The most challenging part of the project was possibly also the most valuable to the company.  My system moved training of models to automatically-managed remote AWS instances.  Rather than requiring the data scientist to manually manage the resources used by their box (which also involved restarting their instance and interrupting their workflow whenever they needed to make a change), my system moved all GPU-intensive processes to automatically-managed remote instances.  These instances were automatically spun up right when a process requiring a GPU was started, and were automatically shut down right when that process finished.  This also saved significant AWS costs incurred from paying for idling GPU time (for instance if someone started training a model at the end of a work day, the company used to have to pay for the GPU to sit idle all night).  I also implemented many improvements to the model training code, including implementing an algorithm to efficiently synchronize downloaded images on the remote instance with a data manifest (sporting parallelized and AWS-optimized photo downloads), upgrading the codebase to TensorFlow 2, and implementing parallel training (with near-linear, i.e. near-zero-cost optional speedup).
+          </p>
+          <p>
+            I developed this pipeline as an alternative to Amazon SageMaker, which would have increased hourly instance costs by 40%, and wouldn’t have delivered nearly as many useful or use-case-customized features for the company.  In short, my pipeline greatly increased organization, provenance, error-prevention, ease-of-use, simplicity-of-use, reproducibility, speed, cost, feature availability, and quality of model development.
+          </p>
+          <p>
+
+          </p>
+        </div>
+    </div>
+</div>

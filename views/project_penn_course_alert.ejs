@@ -1,0 +1,128 @@
+<div id="ajax-page" class="ajax-page-content">
+    <div class="ajax-page-wrapper">
+        <div class="ajax-page-nav">
+            <div class="nav-item ajax-page-prev-next">
+              <a class="ajax-page-load" id ="portfolio-previous-button"><i class="zmdi zmdi-chevron-left"></i></a>
+              <a class="ajax-page-load" id="portfolio-next-button"><i class="zmdi zmdi-chevron-right"></i></a>
+            </div>
+            <div class="nav-item ajax-page-close-button">
+                <a id="ajax-page-close-button" href="#"><i class="zmdi zmdi-close"></i></a>
+            </div>
+        </div>
+
+        <div class="ajax-page-title">
+            <h1>Penn Course Alert</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-7 col-md-7 portfolio-block">
+                <div class="owl-carousel portfolio-page-carousel">
+                    <div class="item">
+                        <img src="images/portfolio/full/pca_homepage.png" alt="" />
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/pca_registration.png" alt="" />
+                    </div>
+                    <div class="item">
+                        <img src="images/portfolio/full/pca_manage_alerts.png" alt="" />
+                    </div>
+                </div>
+
+                <!--
+                <div class="portfolio-page-image">
+                    <img src="images/portfolio/1.jpg" alt="">
+                </div>
+                -->
+
+                <script type="text/javascript">
+                    jQuery(document).ready(function($){
+
+                        $('.portfolio-page-carousel').owlCarousel({
+                            smartSpeed:1200,
+                            items: 1,
+                            loop: true,
+                            dots: true,
+                            nav: true,
+                            navText: false,
+                            margin: 10
+                        });
+
+                    });
+                </script>
+            </div>
+
+            <div class="col-sm-5 col-md-5 portfolio-block">
+                <!-- Project Description -->
+                <div class="block-title">
+                    <h3>Quick Info / Links</h3>
+                </div>
+                <ul class="project-general-info">
+                    <li><p><i style="color:black; font-size: 18px;" class="fa fa-calendar"></i> Spring 2020 - Present</p></li>
+                    <li>
+                      <p>
+                        <img src="/images/portfolio/pca-logo.svg" style="height:22px; margin-bottom:2px; margin-right: 1px;"></img>&nbsp;
+                        <a  target="_blank" rel="noopener noreferrer" href="https://penncoursealert.com/">Penn Course Alert</a> (sign-in required)
+                      </p>
+                    </li>
+                    <li>
+                        <p>
+                          <img src="/images/portfolio/labs-logo.svg" style="height:18px; margin-bottom:3px;"></img>&nbsp;
+                          <a  target="_blank" rel="noopener noreferrer" href="https://pennlabs.org/products/penn-course-alert">Penn Labs Product Overview</a>
+                        </p>
+                    </li>
+                    <li><p><i style="color:black; font-size: 18px;" class="fa fa-github"></i> <a  target="_blank" rel="noopener noreferrer" href="https://github.com/pennlabs/penn-courses">Github Codebase</a></p></li>
+                    <li><p><i style="color:black; font-size: 18px;" class="fa fa-file-text-o"></i> <a  target="_blank" rel="noopener noreferrer" href="https://penncoursealert.com/api/documentation/">PCA API Documentation</a></p></li>
+                </ul>
+
+                <p>Penn Course Alert (PCA) is a free and open-source website used by Penn students to sign up for notifications (by email, phone, or mobile push notification) when a watched course opens up during open registration. I redesigned the backend of the app as part of our product refresh, and added a number of useful features. I am currently working on expanding on PCA by exposing analytics about course selectivity and facilitating course trading.</p>
+                <!-- /Project Description -->
+
+                <!-- Technology -->
+                <div class="tags-block">
+                    <div class="block-title">
+                        <h3>Technologies Personally Used</h3>
+                    </div>
+                    <ul class="tags">
+                        <li><a>Python</a></li>
+                        <li><a>Django</a></li>
+                        <li><a>Django REST Framework</a></li>
+                    </ul>
+                </div>
+                <!-- /Technology -->
+
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 portfolio-block">
+            <div class="block-title">
+                <h3>Backend Redesign</h3>
+            </div>
+            <p>Penn Course Alert is useful
+              because open registration at Penn works on a first-come, first-serve basis (so it is quite convenient and advantageous to be able to register right when a course opens up rather than periodically/randomly checking PennInTouch).
+              <br><br>I redesigned the Django Rest Framework (DRF) backend of PCA as part of our product refresh, collaborating closely with biz-dev, designers, and frontend.
+              <br><br>I integrated our Penn Labs unified Oath2 client, affording users an accounts system based on their PennKey log-in (we don't handle any credentials, but rather tap into the university's Shiboleth SSO service).
+              <br><br>With an accounts system set up, I wrote the API code to afford authenticated users secure saving/modification/retrieval of their contact information to/from our databases.
+              This feature allows users to specify their email and phone just once (editing when necessary)
+              rather than inputting contact information for each new registration.
+              <br><br>My redesign also allowed for users to view, edit, cancel, or permently delete any of their registrations (canceled alerts still show up on the manage alerts page and can be resubscribed to, as opposed to deleted alerts). Previously there was no way to view or change subscribed-to alerts. This was also made possible by my integration of an accounts system,
+              which allowed me to change the backend to associate registrations with registered users (each with their contact information stored in our databases), rather than with the user's raw/subject-to-change contact information.
+              <br><br>I implemented an auto-resubscribe feature which allows users to be automatically resubscribed to an alert after it is triggered (rather than having to manually resubscribe).
+            In effect, this lets the user be notified of class openings "until I cancel" rather than "only once". This optional feature was enabled in a peak of ~13,000 registrations in Fall of 2020.
+            <br><br>I also added optional close notifications, so that users can be alerted once a class closes (after having been alerted of its opening). This allows users to quickly see if they still have a shot at getting into the class from their phone or email notifications. In many cases, this feature will save users from the tedious and futile process of attempting to register for a course on PennInTouch (which has a two-step sign-in process) after it has already closed. Having to log into PennInTouch after every PCA notification can be very disruptive (often calling users to action during classes or in the middle of the night), and this feature prevents that disruption in many cases. We don't have usage stats on this feature yet (a registration season has not gone by yet since its creation).
+            <br><br>Finally, I worked with the Penn Mobile team to integrate PCA into our mobile app (allowing users to register for alerts from the mobile app), and added push notifications as an optional means of notification. Push notifications can serve as a cheaper alternative to text messages (both for the club and for users). They are also a natural medium of notification for mobile users (although registrations made on the website can also send push notifications if the user has them enabled).
+            </p><br>
+            <div class="block-title">
+                <h3>Expanding the Scope and Usefulness of PCA</h3>
+            </div>
+            <p>
+            I am currently working on expanding the scope and usefulness of PCA beyond just course alerts.
+            <br><br>I am working on the backend and frontend code to expose analytics about course selectivity (using data from PCA registrations and university-released course status updates through our webhook). These analytics will aim to
+            help students better understand how difficult it will be for them to get into certain classes. This will ultimately allow them to more optimally design their advanced registration course selection rankings,
+            better plan their open registration strategies, and better understand their probability of getting into certain classes (informing long-term requirement fulfilment / academic pathway plans).
+            <br><br>
+          </p>
+            <br>
+          </div>
+        </div>
+    </div>
+</div>

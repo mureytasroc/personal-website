@@ -1,25 +1,47 @@
-<header>
-	<div class="navbar navbar-default navbar-static-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="/"><img src="images/logo.png" alt="logo" height="42"/></a>
-			</div>
-			<div class="navbar-collapse collapse ">
-				<ul class="nav navbar-nav">
-					<li id="Penn Business Roundtable"><a href="/">Home</a></li>
-					<li id="About"><a href="/about">About</a></li>
-					<li id="Roundtables"><a href="/roundtables">Roundtables</a></li>
-					<li id="Members"><a href="/members">Members</a></li>
-					<li id="Speakers"><a href="/speakers">Speakers</a></li>
-					<!-- <li id="Photos"><a href="/photos">Photos</a></li> -->
-					<li id="Contact"><a href="/contact">Contact</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
+<!-- Header -->
+<header id="site_header" class="header mobile-menu-hide">
+  <div class="header-content">
+    <div class="site-title-block mobile-hidden">
+      <div class="site-title">Charley <span>Cunningham</span></div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="site-nav">
+      <!-- Main menu -->
+      <ul id="nav" class="site-main-menu">
+        <li>
+          <a class="pt-trigger" href="#home" data-animation="62">Home</a><!-- href value = data-id without # of .pt-page. -->
+        </li>
+        <li>
+          <a class="pt-trigger" href="#projects" data-animation="62">Projects</a>
+        </li>
+        <li>
+          <a class="pt-trigger" href="#coursework" data-animation="62">Coursework</a>
+        </li>
+        <!--
+        <li>
+          <a class="pt-trigger" href="#blog" data-animation="62">Blog</a>
+        </li>
+        -->
+        <li>
+          <a class="pt-trigger" href="#contact" data-animation="62">Contact</a>
+        </li>
+      </ul>
+      <!-- /Main menu -->
+    </div>
+    <!-- Navigation -->
+  </div>
 </header>
+<!-- /Header -->
+
+<!-- Mobile Header -->
+<div class="mobile-header mobile-visible">
+  <div class="mobile-logo-container">
+    <div class="mobile-site-title">Charley Cunningham</div>
+  </div>
+
+  <a class="menu-toggle mobile-visible">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+<!-- /Mobile Header -->
