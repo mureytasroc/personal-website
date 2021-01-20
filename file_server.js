@@ -62,6 +62,14 @@ app.get('/pcx_auto_docs', function (request, response) {
 		response.render('project_pcx_auto_docs.ejs');
 });
 
+app.get('/wmc', function (request, response) {
+		response.render('project_wmc.ejs');
+});
+
+app.get('/pbr', function (request, response) {
+		response.render('project_pbr.ejs');
+});
+
 
 
 setInterval(function() {

@@ -284,9 +284,8 @@
         var user = 'ccunning',
         domain = 'seas.upenn.edu',
         element = document.getElementById('address_field');
-        element.innerText = user + '@' + domain;
-        //OR
-        //'<a href="mailto:' + user + '@' + domain + '">Email</a>'
+        email = user + '@' + domain
+        element.innerText = '<a href="mailto:' + email + '">' + email + '</a>'
     });
 
 })(jQuery);
