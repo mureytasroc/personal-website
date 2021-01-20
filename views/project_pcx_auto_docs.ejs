@@ -73,7 +73,7 @@
                 <!-- Technology -->
                 <div class="tags-block">
                     <div class="block-title">
-                        <h3>Technologies Personally Used</h3>
+                        <h3>Technologies Used</h3>
                     </div>
                     <ul class="tags">
                         <li><a>Python</a></li>
@@ -103,19 +103,19 @@
               by my auto-docs system. The system would generate an accurate spec and high-quality default documentation without any need for manual input,
               by inspecting the codebase. Additionally, improving the comprehensibility of the generated docs with
               comments and customizations would be easy and enforcable via code reviews.
-              <br><br>My starting point for this system was Django's <a target="_blank" rel="noopener noreferrer" href="https://www.django-rest-framework.org/api-guide/schemas/" >AutoSchema</a> class
+              </p><p style="margin-top:15px;">My starting point for this system was Django's <a target="_blank" rel="noopener noreferrer" href="https://www.django-rest-framework.org/api-guide/schemas/" >AutoSchema</a> class
               and the <a target="_blank" rel="noopener noreferrer" href="https://github.com/Redocly/redoc">Redoc</a> project. However,
               simply installing Redoc and using DRF's default AutoSchema class resulted in docs which were quite barebones.
               These docs could really only serve as a reference for developers already familiar with the codebase,
               as many intricacies and details of the API were not represented or explained anywhere in the docs.
-              <br><br>So, I set out to improve DRF's AutoSchema class both in its default behavior and customizability. I also
+              </p><p style="margin-top:15px;">So, I set out to improve DRF's AutoSchema class both in its default behavior and customizability. I also
               modified the code underlying Redoc with the same goals. I created an AutoSchema subclass called PcxAutoSchema,
               which is the workhorse behind our auto-docs system. I also wrote some code to modify/improve the resulting OpenAPI schema
               (built up by DRF using the codebase's various PcxAutoSchema instances) in ways beyond the reach of the AutoSchema class. I implemented all these changes
               in a <a target="_blank" rel="noopener noreferrer" href="https://github.com/pennlabs/penn-courses/blob/master/backend/PennCourses/docs_settings.py" >docs_settings.py</a> file, also including a section at the top of the file for some manual customizations
               (which weren't appropriate to afford elsewhere in the codebase). I even included comprehensive meta-docs in this file, so future members can
               understand how to maintain the docs as they modify the codebase and develop new features.
-              <br><br>Many of my improvements to DRF's AutoSchema class are generalizable beyond the Penn Courses codebase. I intend open a pull request
+              </p><p style="margin-top:15px;">Many of my improvements to DRF's AutoSchema class are generalizable beyond the Penn Courses codebase. I intend open a pull request
               in the Django REST Framework repo so that DRF's many users can benefit from these improvements, just as Labs has.
               <br><br>
             </p>

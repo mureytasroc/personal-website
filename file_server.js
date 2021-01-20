@@ -1,28 +1,18 @@
 var express = require('express');
 var favicon = require('serve-favicon');
-
 var app = express();
-
 var request = require('request');
-
 var https = require("https");
-
 
 app.use(express.static('public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(favicon(__dirname + '/public/favicon.ico'));
-// app.use('/member', express.static('public'));
-// app.use('/member', favicon(__dirname + '/public/images/favicon.png'));
 
 app.use(express.urlencoded());
 
 var methodOverride = require('method-override');
 app.use(methodOverride('_method'));
-
-
-//app.use(require('./controllers/user'));
-
 
 var port = process.env.PORT || 3000;
 app.listen(port, function () {
@@ -70,6 +60,13 @@ app.get('/pbr', function (request, response) {
 		response.render('project_pbr.ejs');
 });
 
+app.get('/house_valuation_api', function (request, response) {
+		response.render('project_house_valuation_api.ejs');
+});
+
+app.get('/train_rescheduling', function (request, response) {
+		response.render('project_train_rescheduling.ejs');
+});
 
 
 setInterval(function() {

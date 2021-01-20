@@ -1,0 +1,91 @@
+<div id="ajax-page" class="ajax-page-content">
+    <div class="ajax-page-wrapper">
+        <div class="ajax-page-nav">
+            <div class="nav-item ajax-page-prev-next">
+              <a class="ajax-page-load" id ="portfolio-previous-button"><i class="zmdi zmdi-chevron-left"></i></a>
+              <a class="ajax-page-load" id="portfolio-next-button"><i class="zmdi zmdi-chevron-right"></i></a>
+            </div>
+            <div class="nav-item ajax-page-close-button">
+                <a id="ajax-page-close-button" href="#"><i class="zmdi zmdi-close"></i></a>
+            </div>
+        </div>
+
+        <div class="ajax-page-title">
+            <h1>Train Rescheduling</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-7 col-md-7 portfolio-block">
+                <div class="owl-carousel portfolio-page-carousel">
+                    <div class="item">
+                        <img src="images/portfolio/full/house_valuation_api.png" alt="" />
+                    </div>
+                </div>
+
+                <!--
+                <div class="portfolio-page-image">
+                    <img src="images/portfolio/1.jpg" alt="">
+                </div>
+                -->
+
+                <script type="text/javascript">
+                    jQuery(document).ready(function($){
+
+                        $('.portfolio-page-carousel').owlCarousel({
+                            smartSpeed:1200,
+                            items: 1,
+                            loop: true,
+                            dots: true,
+                            nav: true,
+                            navText: false,
+                            margin: 10
+                        });
+
+                    });
+                </script>
+            </div>
+
+            <div class="col-sm-5 col-md-5 portfolio-block">
+                <!-- Project Description -->
+                <div class="block-title">
+                    <h3>Quick Info / Links</h3>
+                </div>
+                <ul class="project-general-info">
+                    <li><p><i style="color:black; font-size: 18px;" class="fa fa-calendar"></i> Fall 2020</p></li>
+                    <li><p><i style="color:black; font-size: 18px;" class="fa fa-file-text-o"></i> <a  target="_blank" rel="noopener noreferrer" href="https://housevaluationapi.herokuapp.com/">Deployed Model Demo</a></p></li>
+                    <li><p><i style="color:black; font-size: 18px;" class="fa fa-file-text-o"></i> <a  target="_blank" rel="noopener noreferrer" href="https://colab.research.google.com/drive/1VkDsuf7LOxqaS4V5Q9NKlbidnJnyvDT2?usp=sharing">Jupyter Notebook</a> (via Google Collab)</p></li>
+                    <li><p><i style="color:black; font-size: 18px;" class="fa fa-github"></i> <a  target="_blank" rel="noopener noreferrer" href="https://github.com/mureytasroc/house-valuation-api">Github Codebase</a></p></li>
+                </ul>
+
+                <p>
+                  desc
+                </p>
+                <!-- /Project Description -->
+
+            </div>
+        </div>
+        <div class="row">
+          <div style="padding-top: 15px;" class="col-lg-12 portfolio-block">
+            <div style="margin: 0;" class="tags-block">
+                <div style="margin: 0;" class="block-title">
+                    <h3>Technologies Used</h3>
+                </div>
+                <ul class="tags">
+                  <li><a>Python</a></li>
+                  <li><a>CatBoost</a></li>
+                  <li><a>scikit-learn</a></li>
+                  <li><a>pandas</a></li>
+                  <li><a>pandasql</a></li>
+                  <li><a>matplotlib</a></li>
+                  <li><a>seaborn</a></li>
+                  <li><a>gmaps</a></li>
+                  <li><a>Django</a></li>
+                  <li><a>Django REST Framework</a></li>
+                </ul>
+            </div>
+            <!-- /Technology -->
+          </div>
+        </div>
+        <br><br>
+    </div>
+</div>

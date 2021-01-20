@@ -86,7 +86,7 @@
                 <!-- Technology -->
                 <div class="tags-block">
                     <div class="block-title">
-                        <h3>Technologies Personally Used</h3>
+                        <h3>Technologies Used</h3>
                     </div>
                     <ul class="tags">
                         <li><a>Python</a></li>
@@ -107,13 +107,14 @@
             Additionally, it allows easy creation and management of mock schedules, and displays analytics on the user's active mock schedule. The search engine and
             schedule analytics utilize administrative/logistical course data as well as review data from university-collected course evalutions. PCP also improves on PennInTouch in many other
             subtle ways, from a more appealing visual design to simply allowing the use of multiple active sessions (tabs), which PennInTouch prevents.
-              <br><br>Before our redesign, PCP (originally developed by Penn student Ben Bernstein) was essentially a frontend application utilizing the university's OpenData API for course data.
+              </p><p style="margin-top:15px;">Before our redesign, PCP (originally developed by Penn student Ben Bernstein) was essentially a frontend application utilizing the university's OpenData API for course data.
               When Penn Labs took over the project, we redesigned the frontend, transitioned to using our Penn Courses API (taking advantage of more data such as course evaluations), and developed a backend for the application. My job was to create the backend.
-              <br><br>I integrated our Penn Labs unified Oath2 client, affording users an accounts system based on their PennKey log-in (we don't handle any credentials, but rather tap into the university's Shiboleth SSO service).
-              <br><br>With an accounts system established, we could save users' mock schedules to our database (maintaining their data across sessions and devices). So I created a data architecture for saved schedules, and built out the Django REST backend
+              </p><p style="margin-top:15px;">I integrated our Penn Labs unified Oath2 client, affording users an accounts system based on their PennKey log-in (we don't handle any credentials, but rather tap into the university's Shiboleth SSO service).
+              </p><p style="margin-top:15px;">With an accounts system established, we could save users' mock schedules to our database (maintaining their data across sessions and devices). So I created a data architecture for saved schedules, and built out the Django REST backend
               to afford authenticated create/update/retrieve/delete operations on these schedules.
-              <br><br>I also developed the Penn Courses API routes for PCP's course search engine (considering search terms and filters in order to return a relevant list of results), and exposed the data used in schedule statistics and course detail pages through course detail routes.
+              </p><p style="margin-top:15px;">I also developed the Penn Courses API routes for PCP's course search engine (considering search terms and filters in order to return a relevant list of results), and exposed the data used in schedule statistics and course detail pages through course detail routes.
             </p>
+            <br><br>
           </div>
         </div>
     </div>

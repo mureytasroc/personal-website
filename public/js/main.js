@@ -283,9 +283,9 @@
         // Add email
         var user = 'ccunning',
         domain = 'seas.upenn.edu',
-        element = document.getElementById('address_field');
-        email = user + '@' + domain
-        element.innerText = '<a href="mailto:' + email + '">' + email + '</a>'
+        element = $('#address_field'),
+        email = user + '@' + domain;
+        element.html('<a href="mailto:' + email + '">' + email + '</a>');
     });
 
 })(jQuery);
