@@ -57,16 +57,17 @@
                     <h3>Quick Info / Links</h3>
                 </div>
                 <ul class="project-general-info">
-                    <li><p><i style="color:black; font-size: 18px;" class="fa fa-calendar"></i> Spring 2020 - Present</p></li>
+                    <li><p><i style="color:black; font-size: 18px; padding-right:-1px;" class="fa fa-calendar"></i> Spring 2020 - Present</p></li>
                     <li>
                       <p>
                         <img src="/images/portfolio/pca-logo.svg" style="height:22px; margin-bottom:2px; margin-right: 1px;"></img>&nbsp;
                         <a  target="_blank" rel="noopener noreferrer" href="https://penncoursealert.com/">Penn Course Alert</a> (sign-in required)
                       </p>
                     </li>
+                    <li><p><i style="padding-left:2px; padding-right: 1px; color:black; font-size: 18px;" class="fa fa-user"></i> Used by 12,000+ students</p></li>
                     <li>
                         <p>
-                          <img src="/images/portfolio/labs-logo.svg" style="height:18px; margin-bottom:3px;"></img>&nbsp;
+                          <img src="/images/portfolio/labs-logo.svg" style="margin-left:-1px; margin-right:1px; height:18px; margin-bottom:3px;"></img>&nbsp;
                           <a  target="_blank" rel="noopener noreferrer" href="https://pennlabs.org/products/penn-course-alert">Penn Labs Product Overview</a>
                         </p>
                     </li>
@@ -77,25 +78,27 @@
                 <p>Penn Course Alert (PCA) is a free and open-source website used by Penn students to sign up for notifications (by email, phone, or mobile push notification) when a watched course opens up during open registration. I redesigned the backend of the app as part of our product refresh, and added a number of useful features. I am currently working on expanding on PCA by exposing analytics about course selectivity and facilitating course trading.</p>
                 <!-- /Project Description -->
 
-                <!-- Technology -->
-                <div class="tags-block">
-                    <div class="block-title">
-                        <h3>Technologies Used</h3>
-                    </div>
-                    <ul class="tags">
-                        <li><a>Python</a></li>
-                        <li><a>Django</a></li>
-                        <li><a>Django REST Framework</a></li>
-                    </ul>
-                </div>
-                <!-- /Technology -->
-
             </div>
+        </div>
+        <div class="row">
+          <div style="padding-top: 15px;" class="col-lg-12 portfolio-block">
+            <div style="margin: 0;" class="tags-block">
+                <div style="margin: 0;" class="block-title">
+                    <h3>Technologies Used</h3>
+                </div>
+                <ul class="tags">
+                  <li><a>Python</a></li>
+                  <li><a>Django</a></li>
+                  <li><a>Django REST Framework</a></li>
+                </ul>
+            </div>
+            <!-- /Technology -->
+          </div>
         </div>
         <div class="row">
           <div class="col-lg-12 portfolio-block">
             <div class="block-title">
-                <h3>Backend Redesign</h3>
+                <h3 style="margin-bottom: 20px;">Backend Redesign</h3>
             </div>
             <p>Penn Course Alert is useful
               because open registration at Penn works on a first-come, first-serve basis (so it is quite convenient and advantageous to be able to register right when a course opens up rather than periodically/randomly checking PennInTouch).
@@ -109,9 +112,9 @@
               </p><p style="margin-top:15px;">To free our users from the burden of resubscribing to alerts, I implemented an auto-resubscribe feature which allows users to sign up for alerts "until I cancel" rather than "only once". This optional feature was enabled in a peak of ~13,000 registrations in Fall of 2020.
             </p><p style="margin-top:15px;">I also added optional close notifications, so that users can be alerted once a class closes (after having been alerted of its opening). This allows users to quickly see if they still have a shot at getting into the class from their phone or email notifications. In many cases, this feature will save users from the tedious and futile process of attempting to register for a course on PennInTouch (which has a two-step sign-in process) after it has already closed. Having to log into PennInTouch after every PCA notification can be very disruptive (with users often called to action during classes or in the middle of the night), and this feature prevents that disruption in many cases. We don't have usage stats on this feature yet (a registration season has not gone by yet since its creation).
             </p><p style="margin-top:15px;">Finally, I worked with the Penn Mobile team to integrate PCA into our mobile app (allowing users to register for alerts from the mobile app), and added push notifications as an optional means of notification. Push notifications can serve as a cheaper alternative to text messages (both for the club and for users). They are also a natural medium of notification for mobile users (although registrations made on the website can also send push notifications if the user has them enabled).
-            </p><br>
-            <div class="block-title">
-                <h3>Expanding the Scope and Usefulness of PCA</h3>
+            </p>
+            <div style="margin-top:30px;" class="block-title">
+                <h3 style="margin-bottom: 20px;">Expanding the Scope and Usefulness of PCA</h3>
             </div>
             <p>
             I am currently working on expanding the scope and usefulness of PCA beyond just course alerts.
