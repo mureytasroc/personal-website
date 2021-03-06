@@ -1,0 +1,280 @@
+<div id="ajax-page" class="ajax-page-content">
+    <div class="ajax-page-wrapper">
+        <div class="ajax-page-nav">
+            <div class="nav-item ajax-page-prev-next">
+              <a class="ajax-page-load" id ="portfolio-previous-button"><i class="zmdi zmdi-chevron-left"></i></a>
+              <a class="ajax-page-load" id="portfolio-next-button"><i class="zmdi zmdi-chevron-right"></i></a>
+            </div>
+            <div class="nav-item ajax-page-close-button">
+                <a id="ajax-page-close-button" href="#"><i class="zmdi zmdi-close"></i></a>
+            </div>
+        </div>
+
+        <div class="ajax-page-title">
+            <h1>Penn Course Statistics</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-7 col-md-7 portfolio-block">
+                <div class="owl-carousel portfolio-page-carousel">
+                    <div class="item">
+                        <img src="images/portfolio/full/penn_course_stats.png" alt="" />
+                    </div>
+                </div>
+
+                <!--
+                <div class="portfolio-page-image">
+                    <img src="images/portfolio/1.jpg" alt="">
+                </div>
+                -->
+
+                <script type="text/javascript">
+                    jQuery(document).ready(function($){
+
+                        $('.portfolio-page-carousel').owlCarousel({
+                            smartSpeed:1200,
+                            items: 1,
+                            loop: true,
+                            dots: true,
+                            nav: true,
+                            navText: false,
+                            margin: 10
+                        });
+
+                    });
+                </script>
+            </div>
+
+            <div class="col-sm-5 col-md-5 portfolio-block">
+                <!-- Project Description -->
+                <div class="block-title">
+                    <h3>Quick Info / Data Sources</h3>
+                </div>
+                <ul class="project-general-info">
+                    <li><p><i style="color:black; font-size: 18px;" class="fa fa-calendar"></i> Analysis of data from the spring 2020 semester</p></li>
+                    <li><p><i style="color:black; font-size: 18px;" class="fa fa-calendar"></i> Project undertaken in the spring of 2021</p></li>
+                    <li><p><img src="/images/portfolio/labs-logo.svg" style="margin-left:-1px;margin-right:1px;height:18px; margin-bottom:3px;"></img>&nbsp;
+                       <a  target="_blank" rel="noopener noreferrer" href="https://penncoursealert.com/api/documentation/">Penn Courses API</a> (course data, review data)</p></li>
+                    <li><p>
+                      <img src="/images/portfolio/pca-logo.svg" style="height:22px; margin-bottom:2px; margin-right: 1px;"></img>&nbsp;
+                      <a  target="_blank" rel="noopener noreferrer" href="https://pennlabs.org/products/penn-course-alert">Penn Course Alert</a> (registration volume data)
+                    </p></li>
+                    <li><p><i style="color:black; font-size: 18px;" class="fa fa-database"></i> <a  target="_blank" rel="noopener noreferrer" href="https://drive.google.com/drive/folders/1hCD3W8k1WgCiL3NgMG5u6wARUaJjy_wh?usp=sharing">Cleaned datasets</a></p></li>
+                </ul>
+
+                <p>
+                  In this project, I present a data-driven analysis of the academic experience at Penn.
+                  I use spring 2020 course data made available by the university
+                  (accessible through the Penn Courses API), as well as spring 2020 registration volume data from Penn Course Alert. Due to the
+                  API-accessible and non-tabular format of these data, I made use of Python to collect, clean, and format the data into
+                  CSVs. To take a look at the cleaned data or make use of it yourself, follow the above link to my cleaned datasets.
+                </p>
+                <!-- /Project Description -->
+
+                <!-- Technology -->
+                <div class="tags-block">
+                    <div class="block-title">
+                        <h3 style="margin-bottom:10px;">Technologies Used</h3>
+                    </div>
+                    <ul class="tags">
+                        <li><a>Tableau</a></li>
+                        <li><a>Python</a></li>
+                    </ul>
+                </div>
+                <!-- /Technology -->
+
+            </div>
+        </div>
+        <div class="row">
+          <div style="padding-top: 15px;" class="col-lg-12 portfolio-block">
+            <div class="block-title">
+                <h3 style="margin-bottom: 20px;">Advanced Registration and Open Registration</h3>
+            </div>
+            <p>
+              Registration at Penn works in two phases. In the first phase, called <a  target="_blank" rel="noopener noreferrer" href="https://www.college.upenn.edu/registration-tips">advanced registration</a>,
+              students rank 6-7 courses they would like to take in the upcoming semester, and specify the max number of credits they want to take.
+              After the advanced registration deadline (see the <a  target="_blank" rel="noopener noreferrer" href="https://almanac.upenn.edu/penn-academic-calendar">Penn academic calendar</a> for important dates like these),
+              the administration's automated system takes a week or so to assign classes based on everyone's rankings, after which they release schedules on PennInTouch.
+            </p><p style="margin-top:15px;">
+              Unfortunately, it is quite common to be rejected from some of your desired classes, especially if they are highly demanded by other students as well.
+              The day after schedules are released, a period known as "add/drop" (or "open registration") begins. During this period, students may register for
+              any open class (as long they are eligible to register for the class, and it doesn't handle registration using permits). As you can probably imagine,
+              this is a free for all of sorts, with spots in the popular classes being snatched up by eager students very soon after an opening is created (for instance by a student dropping the class or by the instructor expanding the capacity).
+            </p>
+            <div class="block-title">
+                <h3 style="margin-top: 35px; margin-bottom: 20px;">Penn Course Alert: Popularity and Difficulty of Registration</h3>
+            </div>
+            <p>
+              To make watching classes less time consuming, Penn students have developed a website called <a  target="_blank" rel="noopener noreferrer" href="https://pennlabs.org/products/penn-course-alert">Penn Course Alert</a>,
+              where students can sign up to be notified when a class opens up. This means they don't have to periodically check PennInTouch to see if the class has opened (increasing their chances of getting into their desired class in proportion to the
+              frequency with which they check PIT, i.e. the amount of time they are willing to waste). However, that doesn't mean registration
+              is easy; although much less time consuming, registration using Penn Course Alert is like a wild west quickdraw competition, where the student who can log into PennInTouch and register the fastest (after receiving a course alert) wins.
+            </p>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-xs-12 col-sm-12" style="vertical-align: middle;">
+                  <img class="ww_image_left" src="images/portfolio/penn_course_stats/penn_in_touch.jpeg">
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-xs-12 col-sm-12" style="vertical-align: middle;">
+                  <img class="ww_image_right" src="images/portfolio/penn_course_stats/wild_west.jpg">
+                </div>
+            </div>
+            <p style="margin-top:15px;">
+              Across all Penn classes offered in spring 2020, the average fraction of the add/drop period classes were open (below capacity) was around 75%, while the standard deviation was 38%. This statistic
+              represents the chance that a random class will be open at a random point in time during the add/drop period.
+              To roughly approximate how difficult it will be for you to register for classes in your major during open registration, see the below chart breaking this statistic down by department (one sorts alphabetically by
+              department name and the other sorts by statistic value). However, note that this statistic may be artificially inflated for some departments which have their own
+              waitlist/permit system (like the CIS department). Check the registration rules for your department(s) of interest before putting too much weight into this chart. For instance, while the CIS
+              department has a nearly 80% average open fraction value, this is only because they use a waitlist system which limits open registration demand (indeed, they still face <a  target="_blank" rel="noopener noreferrer" href="https://www.thedp.com/article/2018/11/upenn-engineering-computer-science-course-waitlist-penn">"painfully high" demand</a> for courses
+              in their waitlist system). Also (as we will see later), this averaged statistic can be misleading because individually, highly popular classes will often have near-0% values. Less popular courses often have near-100% values, inflating the averages.
+            </p>
+
+            <div class="row" style="margin-top:30px; margin-bottom: 30px; margin-left:-50px">
+                <div class="col-lg-6">
+                  <img class="size-by-size-chart size-by-size-left" src="images/portfolio/penn_course_stats/alpha_dept_fraction_registration_open.png">
+                </div>
+                <div class="col-lg-6">
+                  <img class="size-by-size-chart" src="images/portfolio/penn_course_stats/dept_fraction_registration_open.png">
+                </div>
+            </div>
+
+            <p style="margin-top:15px;">We know the average of this statistic is 75%, while the standard deviation is 38%. Let's get a better sense of the distribution by plotting a histogram of our data.</p>
+
+            <img class="chart"
+              src="images/portfolio/penn_course_stats/po_histogram.png">
+
+            <p style="margin-top:15px;">Our most common bins are near-0% and near-100%. As discussed above, these correspond (respectively) to the highly popular courses and the normal courses which don't usually reach max capacity. Let's also take a look at the distribution for a specific department, OIDD.</p>
+
+            <img class="chart"
+              src="images/portfolio/penn_course_stats/po_hist_oidd.png">
+
+            <p style="margin-top:15px;">For the OIDD department, the near-0% and near-50% bins are inflated compared to the university-wide histogram above. This is likely because a there are more highly popular courses in OIDD than usual (e.g. Negotiations [OIDD-291], and Analytics & the Digital Economy [OIDD-245]), and also more moderately popular courses which are at max capacity for around 50% of the add/drop period.</p>
+
+            <p style="margin-top:15px;">Let's revisit a topic discussed above, Penn Course Alert. We would expect a significant relationship between Penn Course Alert registration volume and our above-discussed statistic (fraction of add/drop period open). Here PCA Popularity is simply calculated as the ratio of total registration volume to section capacity (10 registrations is more significant for a class with a max capacity of 10 than a class with a max capacity of 200). Note that OIDD-245 makes an appearance in the plot below (the class for which this article was created). Take this class if you want to learn how to make fancy charts like these, and learn other important data analysis skills!</p>
+
+            <img class="chart"
+              src="images/portfolio/penn_course_stats/pca_apo.png">
+
+            <p style="margin-top:15px;">As predicted, there is an inverse correlation between PCA Popularity and fraction of add/drop period open. Interestingly, PCA popularity spikes for classes with near-0% fractions. This makes sense as these sections are where PCA has the most advantage over the periodically check PennInTouch registration strategy; the latter strategy might work for a class which is open 50% of the add/drop period, but will probably be fruitless for a class which is only open for 1% of the add/drop period.</p>
+            <div class="block-title">
+                <h3 style="margin-top: 35px; margin-bottom: 20px;">Penn Course Review</h3>
+            </div>
+            <p><a  target="_blank" rel="noopener noreferrer" href="https://pennlabs.org/products/penn-course-review">Penn Course Review</a> is a website that exposes data from end-of-semester student course evaluations to the university at large (students and faculty alike). This website is maintained by students, although sanctioned by the university and fed with data (and funding) from the university.
+            </p><p style="margin-top:15px;">
+              Let's also consider how Penn Course Review data affects demand for courses, and thereby course selectivity. We consider four dimensions of review data: difficulty, work required, course quality, and instructor quality.</p>
+
+            <div class="row" style="margin-top:30px; margin-bottom: 30px; margin-left:-50px">
+                <div class="col-lg-6">
+                  <img class="size-by-size-chart size-by-size-left" src="images/portfolio/penn_course_stats/difficulty_pca.png">
+                </div>
+                <div class="col-lg-6">
+                  <img class="size-by-size-chart" src="images/portfolio/penn_course_stats/work_pca.png">
+                </div>
+            </div>
+
+            <div class="row" style="margin-top:30px; margin-bottom: 30px; margin-left:-50px">
+                <div class="col-lg-6">
+                  <img class="size-by-size-chart size-by-size-left" src="images/portfolio/penn_course_stats/cquality_pca.png">
+                </div>
+                <div class="col-lg-6">
+                  <img class="size-by-size-chart" src="images/portfolio/penn_course_stats/iquality_pca.png">
+                </div>
+            </div>
+
+            <p style="margin-top:15px;">Note that difficulty rating (one of the prominently displayed statistics on Penn Course Review) has the most significant negative correlation with PCA popularity (i.e. less difficult classes tend to have a higher popularity on PCA). Work required is not prominently displayed on PCR, but it has the next most significant negative correlation with PCA popularity. Course quality (prominently displayed on PCR) and instructor quality (not prominently displayed) don't seem to have any significant correlation with PCA popularity. This indicates that rated course/instructor quality is not a strong driver of course demand (other factors like degree requirements and low difficulty seem to be more relevant).</p>
+            <p style="margin-top:15px;">To analyze correlations among our course review metrics, let's plot the pairwise relationships.</p>
+            <img class="big-chart"
+              src="images/portfolio/penn_course_stats/pcr_corr.png">
+            <p style="margin-top:15px;">Based on these charts, course quality and instructor quality are strongly positively correlated. Difficulty and work required are also positively correlated, but less strongly so. There seems to be a slight negative relationship between work required and course quality, however there is very high variability around this trend (i.e. many courses with high work required and high quality, and many with low work required and low quality, despite the average trend).</p>
+            <p style="margin-top:15px;">As an interesting side observation, the below chart shows that difficulty rating is somewhat positively correlated with the number of recitations a class has, as well as the size of the class. This makes sense since recitations are generally used to assist with instruction, which becomes increasingly necessary in bigger and/or more challenging classes.</p>
+            <img class="chart"
+              src="images/portfolio/penn_course_stats/rec_dif.png">
+            <p style="margin-top:15px;">By the way, if you are an incoming student and aren't familiar with PCA or PCR, here are some screenshots of the websites. You will probably be using them quite a bit during your time at Penn!</p>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-xs-12 col-sm-12" style="vertical-align: middle;">
+                  <img class="ww_image_left" src="images/portfolio/penn_course_stats/pca_meme.png">
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-xs-12 col-sm-12" style="vertical-align: middle;">
+                  <img class="ww_image_right" src="images/portfolio/penn_course_stats/pcr_meme.png">
+                </div>
+            </div>
+            <div class="block-title">
+                <h3 style="margin-top: 35px; margin-bottom: 20px;">Other Factors Affecting Course Demand</h3>
+            </div>
+            <p>As I'm sure you can imagine, there are many complicated factors which affect PCA popularity. Let's take a look at a few more miscellaneous data features relevant to PCA popularity. Let's take a look at earliest start time of the course (on any of its meeting days).</p>
+            <img class="chart"
+              src="images/portfolio/penn_course_stats/pca_start.png">
+            <p style="margin-top:15px;">As we might expect, early-morning classes and classes late in the day are less popular. Now, let's take a look at meeting days.</p>
+            <img class="chart"
+              src="images/portfolio/penn_course_stats/pca_days.png">
+            <p style="margin-top:15px;">Our data in this chart could be confounded by certain meeting day sets being associated with less highly demanded groups of courses, but there seems to be a slight preference for meeting days in the middle of the week (i.e. avoiding Monday and Friday, especially Friday). Finally, let's take a look at CUs.</p>
+            <img class="chart"
+              src="images/portfolio/penn_course_stats/credit_pca.png">
+            <p style="margin-top:15px;">Interestingly, 1.5CU classes (generally classes with a lab or extra component constituting an extra 0.5CU) have a slightly higher average popularity than 1CU classes. As we would expect, half-credit courses are less popular (probably because these kinds of courses are much less frequently degree/major/concentration requirements).</p>
+
+            <div class="block-title">
+                <h3 style="margin-top: 35px; margin-bottom: 20px;">Factors Affecting Instructor Quality and Difficulty</h3>
+            </div>
+            <p>Let's analyze how nuumber of courses taught and number of departments affect instructor quality and difficulty ratings.</p>
+            <div class="row" style="margin-top:30px; margin-bottom: 30px; margin-left:-50px">
+                <div class="col-lg-6">
+                  <img class="size-by-size-chart size-by-size-left" src="images/portfolio/penn_course_stats/inst_num_crs.png">
+                </div>
+                <div class="col-lg-6">
+                  <img class="size-by-size-chart" src="images/portfolio/penn_course_stats/inst_dif_num_crs.png">
+                </div>
+            </div>
+            <div class="row" style="margin-top:30px; margin-bottom: 30px; margin-left:-50px">
+                <div class="col-lg-6">
+                  <img class="size-by-size-chart size-by-size-left" src="images/portfolio/penn_course_stats/inst_num_dep.png">
+                </div>
+                <div class="col-lg-6">
+                  <img class="size-by-size-chart" src="images/portfolio/penn_course_stats/inst_dif_num_dep.png">
+                </div>
+            </div>
+            <p style="margin-top:15px;">
+              There seems to be a significant positive correlation between instructor quality and number of courses taught, as well as between instructor quality and number of departments. This makes sense because professors who teach more classes get more practice teaching, and are probably more interested in teaching to begin with (since they chose to take on increased teaching courseloads). There is a slight negative correlation between difficulty and number of courses taught, which could be due to better teaching making the material feel less difficult, or possibly due to instructors with higher teaching courseloads aiming to reduce the dificulty and time commitment of grading (since their time is spread out across more classes).
+            </p>
+
+            <div class="block-title">
+                <h3 style="margin-top: 35px; margin-bottom: 20px;">Ranking Departments</h3>
+            </div>
+            <p>To end this article, I will leave you with department rankings based on average difficulty, work required, course quality, and instructor quality ratings (respectively). See how your department stacks up! For each ranking, I provide an alphabetized version and a sorted-by-value version of the chart to make visually searching the data easier. I hope you enjoyed this article!</p>
+
+            <div class="row" style="margin-top:30px; margin-bottom: 30px; margin-left:-50px">
+                <div class="col-lg-6">
+                  <img class="size-by-size-chart size-by-size-left" src="images/portfolio/penn_course_stats/alpha_dept_rank_dif.png">
+                </div>
+                <div class="col-lg-6">
+                  <img class="size-by-size-chart" src="images/portfolio/penn_course_stats/dept_rank_dif.png">
+                </div>
+            </div>
+            <div class="row" style="margin-top:30px; margin-bottom: 30px; margin-left:-50px">
+                <div class="col-lg-6">
+                  <img class="size-by-size-chart size-by-size-left" src="images/portfolio/penn_course_stats/alpha_dept_rank_work.png">
+                </div>
+                <div class="col-lg-6">
+                  <img class="size-by-size-chart" src="images/portfolio/penn_course_stats/dept_rank_work.png">
+                </div>
+            </div>
+            <div class="row" style="margin-top:30px; margin-bottom: 30px; margin-left:-50px">
+                <div class="col-lg-6">
+                  <img class="size-by-size-chart size-by-size-left" src="images/portfolio/penn_course_stats/alpha_dept_rank_cqual.png">
+                </div>
+                <div class="col-lg-6">
+                  <img class="size-by-size-chart" src="images/portfolio/penn_course_stats/dept_rank_cqual.png">
+                </div>
+            </div>
+            <div class="row" style="margin-top:30px; margin-left:-50px">
+                <div class="col-lg-6">
+                  <img class="size-by-size-chart size-by-size-left" src="images/portfolio/penn_course_stats/alpha_dept_rank_iqual.png">
+                </div>
+                <div class="col-lg-6">
+                  <img class="size-by-size-chart" src="images/portfolio/penn_course_stats/dept_rank_iqual.png">
+                </div>
+            </div>
+
+          </div>
+        </div>
+        <br><br>
+    </div>
+</div>

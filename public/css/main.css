@@ -2624,3 +2624,70 @@ blockquote footer, blockquote small, blockquote .small {
   padding: 10px;
   position: relative;
 }
+
+.ww_image_left {
+  display: block; margin-left: 10%; width: 40vw; margin-top: 30px; margin-bottom: 30px;
+}
+
+.ww_image_right {
+  display: block; margin-right: 10%; width: 40vw; margin-top: 30px; margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 991px) {
+  .ww_image_left {
+    margin-left: auto; margin-right: auto;
+    width: 80vw;
+  }
+
+  .ww_image_right {
+    margin-left: auto; margin-right: auto;
+    width: 80vw;
+  }
+}
+
+.size-by-size-chart {
+  display: block; margin-left: auto; margin-right: auto;
+}
+
+@media only screen and (max-width: 1200px) {
+.size-by-size-chart {
+  width: 700px;
+}
+.size-by-size-left{
+    margin-bottom: 20px;
+}
+}
+
+@media only screen and (max-width: 991px) {
+.size-by-size-chart {
+  width: 600px;
+}
+}
+
+.chart {
+  display: block; margin-left: auto; margin-right: auto; margin-top:30px; margin-bottom: 30px;
+}
+@media only screen and (min-width: 768px) {
+  .chart {
+    width:600px;
+  }
+}
+@media only screen and (min-width: 991px) {
+  .chart {
+    width:800px;
+  }
+}
+
+.big-chart {
+  display: block; margin-left: auto; margin-right: auto; margin-top:30px; margin-bottom: 30px;
+}
+@media only screen and (min-width: 768px) {
+  .big-chart {
+    width:800px;
+  }
+}
+@media only screen and (min-width: 991px) {
+  .big-chart {
+    width:1000px;
+  }
+}

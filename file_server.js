@@ -64,6 +64,10 @@ app.get('/house_valuation_api', function (request, response) {
 		response.render('project_house_valuation_api.ejs');
 });
 
+app.get('/penn_course_statistics', function (request, response) {
+		response.render('project_penn_course_statistics.ejs');
+});
+
 app.get('/train_rescheduling', function (request, response) {
 		response.render('project_train_rescheduling.ejs');
 });
